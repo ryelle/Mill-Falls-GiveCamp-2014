@@ -58,6 +58,5 @@
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'mfcs_2014' ), __( '1 Comment', 'mfcs_2014' ), __( '% Comments', 'mfcs_2014' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'mfcs_2014' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

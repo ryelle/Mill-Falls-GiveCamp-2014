@@ -57,6 +57,5 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'mfcs_2014' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
