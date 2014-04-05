@@ -26,6 +26,7 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------------------------
 1.0 - Normalize
 2.0 - Typography
+	2.5 - Structure
 3.0 - Elements
 4.0 - Forms
 5.0 - Navigation
@@ -63,6 +64,11 @@ and Blueprint http://www.blueprintcss.org/
 2.0 - Typography
 --------------------------------------------------------------*/
 @import "partials/typography";
+
+/*--------------------------------------------------------------
+2.5 - Structure
+--------------------------------------------------------------*/
+@import "partials/structure";
 
 /*--------------------------------------------------------------
 3.0 - Elements

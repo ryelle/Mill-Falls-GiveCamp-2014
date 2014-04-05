@@ -25,6 +25,7 @@ and Blueprint http://www.blueprintcss.org/
 ----------------------------------------------------------------
 1.0 - Normalize
 2.0 - Typography
+	2.5 - Structure
 3.0 - Elements
 4.0 - Forms
 5.0 - Navigation
@@ -364,6 +365,35 @@ small {
 
 big {
   font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+2.5 - Structure
+--------------------------------------------------------------*/
+#page {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.content-area {
+  float: right;
+  margin: 0 0 0 -25%;
+  width: 100%;
+}
+
+.site-main {
+  margin: 0 0 0 25%;
+}
+
+.site-content .widget-area {
+  float: left;
+  overflow: hidden;
+  width: 25%;
+}
+
+.site-footer {
+  clear: both;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
