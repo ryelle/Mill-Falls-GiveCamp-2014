@@ -1,0 +1,21 @@
+// ==========================================================================
+// Alignments
+// ==========================================================================
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: $spacing/2;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: $spacing/2;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}

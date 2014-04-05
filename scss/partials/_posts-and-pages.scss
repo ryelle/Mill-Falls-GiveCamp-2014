@@ -1,0 +1,33 @@
+// ==========================================================================
+// Posts and pages
+// ==========================================================================
+
+.sticky {
+}
+
+.hentry {
+	margin: 0 0 $spacing;
+}
+
+.byline,
+.updated {
+	display: none;
+}
+
+.single,
+.group-blog {
+	.byline {
+		display: inline;
+	}
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: $spacing 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 $spacing;
+}

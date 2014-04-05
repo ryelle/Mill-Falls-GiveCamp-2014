@@ -1,0 +1,45 @@
+// ==========================================================================
+// Elements
+// ==========================================================================
+
+hr {
+	background-color: $color__hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: $spacing/2;
+}
+ul,
+ol {
+	margin: 0 0 $spacing/2 $spacing;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: $spacing/2;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 $spacing/2 $spacing/2;
+}
+img {
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 $spacing/2;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
