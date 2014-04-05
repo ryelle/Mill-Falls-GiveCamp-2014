@@ -46,7 +46,7 @@ function mfcs_2014_wp_title( $title, $sep ) {
 	if ( is_feed() ) {
 		return $title;
 	}
-	
+
 	global $page, $paged;
 
 	// Add the blog name
