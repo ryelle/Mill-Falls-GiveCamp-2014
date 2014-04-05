@@ -98,9 +98,52 @@ class MFCS_MenuWidget extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		// Bail if we're not a page
-		if ( !is_page() ) return;
+		if ( !is_page() )
+			return;
+
+		$locations = get_nav_menu_locations();
+		$menu = $locations[ 'primary' ];
+		$items = wp_get_nav_menu_items( $menu );
+		$this_page = wp_list_filter( $items, array( 'object_id' => get_the_ID() ) );
+
+		if ( is_array( $this_page ) )
+			$this_page = current( $this_page );
+
+		// If we don't can't find ourself, we should leave.
+		if ( ! is_a( $this_page, 'WP_Post' ) )
+			return;
+
+		if ( '0' === $this_page->menu_item_parent ) {
+			$parent_id = $this_page->ID;
+		} else {
+			$parent_id = $this_page->menu_item_parent;
+		}
+
+		$parent = wp_list_filter( $items, array( 'ID' => $parent_id ) );
+		if ( is_array( $parent ) )
+			$parent = current( $parent );
+
+		$siblings = wp_list_filter( $items, array( 'menu_item_parent' => $parent_id ) );
+
+		// If we don't have a valid parent, or there are no siblings, let's bail.
+		if ( ! is_a( $parent, 'WP_Post' ) || empty( $siblings ) )
+			return;
 
 		echo $args[ 'before_widget' ];
+
+		printf( '<h3>%s</h3>', $parent->title );
+		echo '<ul>';
+
+		foreach ( $siblings as $menu_item ){
+			$class = '';
+			if ( get_the_ID() == $menu_item->object_id ){
+				$class = 'class="current-page"';
+			}
+
+			printf( '<li><a href="%1$s" %3$s>%2$s</a></li>', $menu_item->url, $menu_item->title, $class );
+		}
+
+		echo '</ul>';
 
 		echo $args[ 'after_widget' ];
 	}
