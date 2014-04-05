@@ -14,11 +14,20 @@ class MFCS_ImageWidget extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
+		$title = isset( $instance['title'] )? $instance['title']: '';
+		$content = isset( $instance['content'] )? $instance['content']: '';
+		$image = isset( $instance['image'] )? $instance['image']: '';
 
 		echo $args[ 'before_widget' ];
+		?>
 
-		var_dump( $instance );
+		<h3><?php echo esc_html( $title ); ?></h3>
+		<div class="widget-image">
+			<?php echo wp_get_attachment_image( $image, 'widget' ); ?>
+		</div>
+		<p><?php echo $content; ?></p>
 
+		<?php
 		echo $args[ 'after_widget' ];
 	}
 
