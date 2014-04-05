@@ -120,6 +120,7 @@ sub {
 
 img {
   border: 0;
+  vertical-align: middle;
 }
 
 svg:not(:root) {
@@ -392,17 +393,17 @@ th {
 5.0 - Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #5e7e37;
 }
 
 a:visited {
-  color: purple;
+  color: #5e7e37;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: midnightblue;
+  color: #1c2510;
 }
 
 /*--------------------------------------------------------------

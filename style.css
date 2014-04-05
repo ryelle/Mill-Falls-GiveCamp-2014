@@ -145,6 +145,7 @@ sub {
 
 img {
   border: 0;
+  vertical-align: middle;
 }
 
 svg:not(:root) {
@@ -361,7 +362,7 @@ big {
 /*--------------------------------------------------------------
 2.5 - Structure
 --------------------------------------------------------------*/
-#page {
+.container {
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -564,17 +565,17 @@ textarea {
 5.1 - Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #5e7e37;
 }
 
 a:visited {
-  color: purple;
+  color: #5e7e37;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: midnightblue;
+  color: #1c2510;
 }
 
 /*--------------------------------------------------------------

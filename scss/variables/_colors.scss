@@ -4,9 +4,9 @@
 
 $color__primary-text: #404040;
 
-$color__link: royalblue;
-$color__link--visited: purple;
-$color__link--hover: midnightblue;
+$color__link: #5e7e37;
+$color__link--visited: $color__link;
+$color__link--hover: darken( $color__link, 25% );
 
 $color__pre-background: #eee;
 $color__mark-background: #fff9c0;
