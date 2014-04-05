@@ -116,10 +116,19 @@ add_action( 'wp_enqueue_scripts', 'mfcs_2014_scripts' );
  * Add admin scripts to specific pages
  */
 function mfcs_2014_admin_scripts( $screen ){
+
 	if ( 'widgets.php' == $screen ) {
+
 		add_action( 'admin_enqueue_scripts', 'wp_enqueue_media' );
 		wp_enqueue_script( 'mfcs_2014-navigation', get_template_directory_uri() . '/js/app.js', array('jquery') );
+
+	} elseif ( 'post.php' == $screen ) {
+
+		wp_enqueue_style( 'wp-color-picker' );
+		wp_enqueue_script( 'wp-color-picker' );
+
 	}
+
 }
 add_action( 'admin_enqueue_scripts', 'mfcs_2014_admin_scripts', 5 );
 
@@ -132,6 +141,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Add our page metabox(es)
+ */
+require get_template_directory() . '/inc/page-meta.php';
 
 /**
  * Customizer additions.
