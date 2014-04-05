@@ -42,17 +42,13 @@ function mfcs_2014_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
+		'header' => __( 'Header Menu', 'mfcs_2014' ),
 		'primary' => __( 'Primary Menu', 'mfcs_2014' ),
+		'footer' => __( 'Footer Menu', 'mfcs_2014' ),
 	) );
 
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'mfcs_2014_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	add_theme_support( 'post-formats' );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
@@ -77,6 +73,15 @@ function mfcs_2014_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Homepage', 'mfcs_2014' ),
+		'id'            => 'homepage',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'mfcs_2014_widgets_init' );
 
@@ -95,11 +100,6 @@ function mfcs_2014_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mfcs_2014_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
