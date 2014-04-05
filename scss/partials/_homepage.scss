@@ -1,0 +1,36 @@
+
+// 3 Featured widgets
+#featured {
+
+	position: relative;
+	top: $spacing * -1;
+	background: $color__background--widget;
+	border: 1px solid $color__border;
+
+	.widget {
+		box-sizing: border-box;
+		padding: $spacing/2;
+		width: 33%;
+		display: inline-block;
+		vertical-align: top;
+		font-size: em( 12 );
+
+		:first-child {
+			margin-top: 0;
+		}
+	}
+
+	.widget-image {
+		text-align: center;
+	}
+
+	.widget_rss {
+		.rsswidget img { display: none; }
+
+		ul, li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	}
+}
