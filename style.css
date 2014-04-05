@@ -387,6 +387,18 @@ big {
   width: 100%;
 }
 
+.front-page .content-area {
+  float: none;
+  margin: 0;
+}
+.front-page .site-main {
+  margin: 0;
+}
+.front-page .site-content .widget-area {
+  float: none;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 3.0 - Elements
 --------------------------------------------------------------*/

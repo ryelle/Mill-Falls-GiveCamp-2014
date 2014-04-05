@@ -31,6 +31,10 @@ function mfcs_2014_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_front_page() ){
+		$classes[] = 'front-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'mfcs_2014_body_classes' );

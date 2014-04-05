@@ -27,3 +27,21 @@
 	clear: both;
 	width: 100%;
 }
+
+.front-page {
+
+	.content-area {
+		float: none;
+		margin: 0;
+	}
+
+	.site-main {
+		margin: 0;
+	}
+
+	.site-content .widget-area {
+		float: none;
+		width: 100%;
+	}
+
+}
