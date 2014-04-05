@@ -18,7 +18,6 @@ function mfcs_2014_metabox_color() {
 	$meta_key = 'mfcs_header_color';
 	$add_text = 'Color';
 	$color    = mfcs_header_color();
-	var_dump( $color );
 
 	wp_nonce_field( 'save-page-color', '_mfcs_header_color' );
 
@@ -43,7 +42,7 @@ function mfcs_2014_metabox_color() {
 	</style>
 	<div class="form-field color">
 		<label for="<?php echo $meta_key; ?>"><?php echo $add_text; ?></label>
-		<input type="text" class="color-picker" name="<?php echo $meta_key; ?>" id="<?php echo $meta_key; ?>" value="" data-default-color="#faf6f2" />
+		<input type="text" class="color-picker" name="<?php echo $meta_key; ?>" id="<?php echo $meta_key; ?>" value="<?php echo esc_attr( $color ); ?>" data-default-color="#faf6f2" />
 		<script>
 		jQuery( document ).ready( function( $ ) {
 			$( document.getElementById('mfcs_header_color') ).wpColorPicker();
