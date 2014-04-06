@@ -23,7 +23,7 @@
 	</footer><!-- #colophon -->
 
 	<div class="site-info">
-		Copyright 2014 Mill Falls Charter School
+		&copy; Copyright 2014 Mill Falls Charter School | Site by <a href="http://floatleftlabs.org/">Float Left Labs</a>
 	</div><!-- .site-info -->
 
 </div><!-- #page -->
