@@ -634,6 +634,24 @@ body {
 /*--------------------------------------------------------------
 ?.? - Footer
 --------------------------------------------------------------*/
+.site-footer {
+  padding: 40px 0;
+  margin-bottom: 20px;
+  background: #f5f9fb;
+}
+.site-footer #footer-navigation {
+  margin: 0 auto;
+}
+.site-footer .fb-like {
+  float: right;
+  text-align: right;
+}
+
+.site-info {
+  padding: 20px;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 5.0 - Navigation
 --------------------------------------------------------------*/
@@ -657,26 +675,37 @@ a:active {
 /*--------------------------------------------------------------
 5.2 - Menus
 --------------------------------------------------------------*/
-#header-navigation {
+#header-navigation,
+#footer-navigation {
   margin: 20px 0 0;
 }
-#header-navigation ul {
+#header-navigation ul,
+#footer-navigation ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-#header-navigation li {
+#header-navigation li,
+#footer-navigation li {
   float: left;
   margin-right: 40px;
 }
-#header-navigation a {
+#header-navigation a,
+#footer-navigation a {
   font-weight: bold;
   color: #7fa352;
   text-decoration: none;
   line-height: 26px;
 }
-#header-navigation a:hover, #header-navigation a:active, #header-navigation a:focus {
+#header-navigation a:hover, #header-navigation a:active, #header-navigation a:focus,
+#footer-navigation a:hover,
+#footer-navigation a:active,
+#footer-navigation a:focus {
   text-decoration: underline;
+}
+
+#footer-navigation a {
+  color: #1c3d74;
 }
 
 #site-navigation {
@@ -691,13 +720,15 @@ a:active {
   padding-left: 0;
 }
 #site-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
   float: left;
   left: 0;
   position: absolute;
-  top: 1.5em;
+  top: 41px;
   z-index: 99999;
+  background: #857891;
+  border-top: 5px solid #857891;
+  border-bottom: 5px solid #857891;
 }
 #site-navigation ul ul ul {
   left: 100%;
@@ -705,6 +736,12 @@ a:active {
 }
 #site-navigation ul ul a {
   width: 200px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: normal;
+}
+#site-navigation ul ul a:hover {
+  background-color: #98b871;
 }
 #site-navigation li {
   float: left;
@@ -713,8 +750,17 @@ a:active {
 #site-navigation li:hover > ul {
   display: block;
 }
+#site-navigation li:hover > a {
+  background-color: #857891;
+  color: white;
+}
 #site-navigation a {
   display: block;
+  padding: 10px 20px;
+  color: #5e7e37;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
   text-decoration: none;
 }
 

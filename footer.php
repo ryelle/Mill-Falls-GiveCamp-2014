@@ -12,9 +12,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<nav id="footer-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
-		</nav><!-- #footer-navigation -->
+		<div class="container">
+			<nav id="footer-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+			</nav><!-- #footer-navigation -->
+
+			<div class="fb-like" data-href="https://www.facebook.com/MillFallsCharterSchool" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+		</div>
 
 	</footer><!-- #colophon -->
 

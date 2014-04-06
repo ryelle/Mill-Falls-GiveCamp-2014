@@ -1,0 +1,20 @@
+.site-footer {
+	padding: $spacing 0;
+	margin-bottom: $spacing/2;
+	background: $color__background--footer;
+
+	#footer-navigation {
+		margin: 0 auto;
+	}
+
+	.fb-like {
+		float:right;
+		text-align: right;
+	}
+}
+
+.site-info {
+	padding: $spacing/2;
+	text-align: center;
+}
+

@@ -2,7 +2,8 @@
 // Menus
 // ==========================================================================
 
-#header-navigation {
+#header-navigation,
+#footer-navigation {
 	margin: $spacing/2 0 0;
 
 	ul {
@@ -28,6 +29,12 @@
 	}
 }
 
+#footer-navigation {
+	a {
+		color: $color__text--heading;
+	}
+}
+
 #site-navigation {
 
 	position: absolute;
@@ -41,13 +48,16 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			display: none;
 			float: left;
 			left: 0;
 			position: absolute;
-			top: 1.5em;
+			top: 41px;
 			z-index: 99999;
+
+			background: $color__background--nav;
+			border-top: 5px solid $color__background--nav;
+			border-bottom: 5px solid $color__background--nav;
 
 			ul {
 				left: 100%;
@@ -55,12 +65,17 @@
 			}
 			a {
 				width: 200px;
+				padding: $spacing/4 $spacing/2;
+				color: white;
+				font-weight: $normal;
 
-				&:hover {}
+				&:hover {
+					background-color: #98b871;
+				}
 			}
 			li {}
 			:hover {// Wat?
-				 > a {}
+				> a {}
 			}
 		}
 	}
@@ -73,12 +88,20 @@
 			> ul {
 				display: block;
 			}
-			> a {}
+			> a {
+				background-color: $color__background--nav;
+				color: white;
+			}
 		}
 	}
 
 	a {
 		display: block;
+		padding: $spacing/4 $spacing/2;
+		color: $color__link--nav;
+		font-size: em( 14 );
+		font-weight: $bold;
+		text-transform: uppercase;
 		text-decoration: none;
 	}
 
