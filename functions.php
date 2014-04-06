@@ -39,6 +39,8 @@ function mfcs_2014_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( '1000', '350', true );
+	add_image_size( 'widget', 285, 100 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -46,11 +48,6 @@ function mfcs_2014_setup() {
 		'primary' => __( 'Primary Menu', 'mfcs_2014' ),
 		'footer' => __( 'Footer Menu', 'mfcs_2014' ),
 	) );
-
-	// Enable support for Post Formats.
-	add_theme_support( 'post-formats' );
-
-	add_image_size( 'widget', 100, 100, true );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
@@ -116,12 +113,85 @@ add_action( 'wp_enqueue_scripts', 'mfcs_2014_scripts' );
  * Add admin scripts to specific pages
  */
 function mfcs_2014_admin_scripts( $screen ){
+
 	if ( 'widgets.php' == $screen ) {
+
 		add_action( 'admin_enqueue_scripts', 'wp_enqueue_media' );
 		wp_enqueue_script( 'mfcs_2014-navigation', get_template_directory_uri() . '/js/app.js', array('jquery') );
+
+	} elseif ( 'post.php' == $screen ) {
+
+		wp_enqueue_style( 'wp-color-picker' );
+		wp_enqueue_script( 'wp-color-picker' );
+
 	}
+
 }
 add_action( 'admin_enqueue_scripts', 'mfcs_2014_admin_scripts', 5 );
+
+/**
+ * Returns the Google font stylesheet URL, if available.
+ *
+ * @return string Font stylesheet URL
+ */
+function mfcs_2014_fonts_url() {
+	$fonts_url = '';
+
+	$font_families = array(
+		'Open+Sans:400italic,400',
+		'Montserrat:400,700'
+	);
+
+	$protocol = is_ssl() ? 'https' : 'http';
+	$query_args = array(
+		'family' => implode( '|', $font_families ),
+		'subset' => 'latin,latin-ext',
+	);
+	$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
+
+	return $fonts_url;
+}
+
+/**
+ * Loads our special font CSS file.
+ *
+ * To disable in a child theme, use wp_dequeue_style()
+ * function mytheme_dequeue_fonts() {
+ *     wp_dequeue_style( 'mfcs_2014-fonts' );
+ * }
+ * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
+ *
+ * @return void
+ */
+function mfcs_2014_fonts() {
+	$fonts_url = mfcs_2014_fonts_url();
+	if ( ! empty( $fonts_url ) )
+		wp_enqueue_style( 'mfcs_2014-fonts', esc_url_raw( $fonts_url ), array(), null );
+}
+add_action( 'wp_enqueue_scripts', 'mfcs_2014_fonts' );
+
+/**
+ * Adds additional stylesheets to the TinyMCE editor if needed.
+ *
+ * @uses museum_fonts_url() to get the Google Font stylesheet URL.
+ *
+ * @param string $mce_css CSS path to load in TinyMCE.
+ * @return string
+ */
+function mfcs_2014_mce_css( $mce_css ) {
+	$fonts_url = mfcs_2014_fonts_url();
+
+	if ( empty( $fonts_url ) )
+		return $mce_css;
+
+	if ( ! empty( $mce_css ) )
+		$mce_css .= ',';
+
+	$mce_css .= esc_url_raw( str_replace( ',', '%2C', $fonts_url ) );
+
+	return $mce_css;
+}
+add_filter( 'mce_css', 'mfcs_2014_mce_css' );
 
 /**
  * Custom template tags for this theme.
@@ -132,6 +202,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Add our page metabox(es)
+ */
+require get_template_directory() . '/inc/page-meta.php';
 
 /**
  * Customizer additions.

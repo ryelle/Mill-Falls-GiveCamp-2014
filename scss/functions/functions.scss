@@ -7,5 +7,5 @@
 // 1. font-size: em(14); 
 // 2. font-size: em(30/14);
 @function em($value, $context: $base__font-size) {
-	@return ($value / $context * 1em);
+	@return ($value / $context * 1rem);
 }

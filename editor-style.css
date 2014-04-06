@@ -120,6 +120,7 @@ sub {
 
 img {
   border: 0;
+  vertical-align: middle;
 }
 
 svg:not(:root) {
@@ -247,10 +248,43 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
+  color: #4b4e53;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
   line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, Trebuchet, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h2 {
+  color: #1c3d74;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3, .widget-title {
+  color: #7fa352;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+h3 a, h3 a:visited, h3 a:hover, .widget-title a, .widget-title a:visited, .widget-title a:hover {
+  color: #7fa352;
+  text-decoration: none;
+}
+
+h4 {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 p {
@@ -392,17 +426,17 @@ th {
 5.0 - Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #ff9900;
 }
 
 a:visited {
-  color: purple;
+  color: #ff9900;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: midnightblue;
+  color: #804d00;
 }
 
 /*--------------------------------------------------------------

@@ -137,6 +137,7 @@ sub {
 // Remove border when inside `a` element in IE 8/9.
 img {
 	border: 0;
+	vertical-align: middle;
 }
 
 // Correct overflow displayed oddly in IE 9.

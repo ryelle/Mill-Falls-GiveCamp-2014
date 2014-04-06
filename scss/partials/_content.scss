@@ -8,11 +8,21 @@
 @import "posts-and-pages";
 
 /*--------------------------------------------------------------
-10.2 - Asides
+10.2 - Homepage
 --------------------------------------------------------------*/
-@import "asides";
+@import "homepage";
 
 /*--------------------------------------------------------------
 10.3 - Comments
 --------------------------------------------------------------*/
 @import "comments";
+
+.donate-button a {
+	display: block;
+	background: url('images/donate-small.png') no-repeat center;
+	background-size: 135px 26px;
+	width: 135px;
+	height: 26px;
+	position: relative;
+	text-indent: -9999em;
+}

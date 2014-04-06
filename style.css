@@ -145,6 +145,7 @@ sub {
 
 img {
   border: 0;
+  vertical-align: middle;
 }
 
 svg:not(:root) {
@@ -272,10 +273,43 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
+  color: #4b4e53;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
   line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, Trebuchet, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h2 {
+  color: #1c3d74;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3, .widget-title {
+  color: #7fa352;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+h3 a, h3 a:visited, h3 a:hover, .widget-title a, .widget-title a:visited, .widget-title a:hover {
+  color: #7fa352;
+  text-decoration: none;
+}
+
+h4 {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 p {
@@ -361,7 +395,7 @@ big {
 /*--------------------------------------------------------------
 2.5 - Structure
 --------------------------------------------------------------*/
-#page {
+.container {
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -558,40 +592,105 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+?.? - Header
+--------------------------------------------------------------*/
+body {
+  border-top: 5px solid #1c3d74;
+}
+
+#masthead {
+  position: relative;
+  margin-bottom: 20px;
+}
+#masthead:before, #masthead:after {
+  content: "";
+  display: table;
+}
+#masthead:after {
+  clear: both;
+}
+
+.site-title a {
+  display: block;
+  float: left;
+  width: 150px;
+  height: 130px;
+  background: url("images/logo-large.png") no-repeat center;
+  background-size: 150px 130px;
+  position: relative;
+  text-indent: -9999em;
+}
+
+#header-navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#site-navigation {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+?.? - Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 5.0 - Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 5.1 - Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #ff9900;
 }
 
 a:visited {
-  color: purple;
+  color: #ff9900;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: midnightblue;
+  color: #804d00;
 }
 
 /*--------------------------------------------------------------
 5.2 - Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
+#header-navigation {
+  margin: 20px 0 0;
 }
-.main-navigation ul {
+#header-navigation ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-.main-navigation ul ul {
+#header-navigation li {
+  float: left;
+  margin-right: 40px;
+}
+#header-navigation a {
+  font-weight: bold;
+  color: #7fa352;
+  text-decoration: none;
+  line-height: 26px;
+}
+#header-navigation a:hover, #header-navigation a:active, #header-navigation a:focus {
+  text-decoration: underline;
+}
+
+#site-navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+#site-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+#site-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
   float: left;
@@ -600,21 +699,21 @@ a:active {
   top: 1.5em;
   z-index: 99999;
 }
-.main-navigation ul ul ul {
+#site-navigation ul ul ul {
   left: 100%;
   top: 0;
 }
-.main-navigation ul ul a {
+#site-navigation ul ul a {
   width: 200px;
 }
-.main-navigation li {
+#site-navigation li {
   float: left;
   position: relative;
 }
-.main-navigation li:hover > ul {
+#site-navigation li:hover > ul {
   display: block;
 }
-.main-navigation a {
+#site-navigation a {
   display: block;
   text-decoration: none;
 }
@@ -774,11 +873,35 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-10.2 - Asides
+10.2 - Homepage
 --------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
+#featured {
+  position: relative;
+  top: -40px;
+  background: #f8fbf5;
+  border: 1px solid #ebede8;
+}
+#featured .widget {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.75rem;
+}
+#featured .widget :first-child {
+  margin-top: 0;
+}
+#featured .widget-image {
+  text-align: center;
+}
+#featured .widget_rss .rsswidget img {
   display: none;
+}
+#featured .widget_rss ul, #featured .widget_rss li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /*--------------------------------------------------------------
@@ -786,6 +909,16 @@ a:active {
 --------------------------------------------------------------*/
 .comment-content a {
   word-wrap: break-word;
+}
+
+.donate-button a {
+  display: block;
+  background: url("images/donate-small.png") no-repeat center;
+  background-size: 135px 26px;
+  width: 135px;
+  height: 26px;
+  position: relative;
+  text-indent: -9999em;
 }
 
 /*--------------------------------------------------------------

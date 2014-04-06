@@ -15,7 +15,9 @@ $line-height: 1.5;
 $monospace: 'courier new', monospace;
 $serif: Georgia, "Times New Roman", Times, serif;
 $sans: Helvetica, Arial, sans-serif;
-// $open-sans: 'Open Sans', $sans; // 300 400 400i 700 700i
+
+$font__body: 'Open Sans', $sans;
+$font__header: Montserrat, Trebuchet, sans-serif;
 
 // Icons
 $genericons: 'Genericons';
