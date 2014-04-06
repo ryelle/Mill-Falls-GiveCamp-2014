@@ -4,6 +4,7 @@
 // These are custom mixins developed to implement common patterns quickly.
 //
 // Available Mixins
+//    font-size
 //    arrow
 //    arrow-lazy
 //    custom-scrollbar
@@ -12,6 +13,11 @@
 //    retina-background
 //
 // ==========================================================================
+
+@mixin font-size($sizeValue: 16) {
+	font-size: $sizeValue + px;
+	font-size: ($sizeValue / 16) + rem;
+}
 
 @mixin arrow($size: 10px, $color: #ccc, $direction: top){
 	@if $direction == "right" {

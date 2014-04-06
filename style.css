@@ -275,6 +275,7 @@ select,
 textarea {
   color: #4b4e53;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -286,18 +287,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: white;
+  font-size: 28px;
   font-size: 1.75rem;
   font-weight: bold;
 }
 
 h2 {
   color: #1c3d74;
+  font-size: 24px;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 h3, .widget-title {
   color: #7fa352;
+  font-size: 18px;
   font-size: 1.125rem;
   font-weight: normal;
 }
@@ -307,6 +311,7 @@ h3 a, h3 a:visited, h3 a:hover, .widget-title a, .widget-title a:visited, .widge
 }
 
 h4 {
+  font-size: 14px;
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -340,7 +345,7 @@ pre {
   background: #eeeeee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -823,6 +828,7 @@ a:active {
   display: block;
   padding: 10px 20px;
   color: #5e7e37;
+  font-size: 14px;
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -1084,6 +1090,7 @@ a:active {
   width: 33%;
   display: inline-block;
   vertical-align: top;
+  font-size: 12px;
   font-size: 0.75rem;
 }
 #featured .widget :first-child {
@@ -1167,6 +1174,9 @@ a.donate-button {
 }
 
 .wp-caption-text {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-style: italic;
   text-align: center;
 }
 

@@ -107,7 +107,7 @@
 		display: block;
 		padding: $spacing/4 $spacing/2;
 		color: $color__link--nav;
-		font-size: em( 14 );
+		@include font-size( 14 );
 		font-weight: $bold;
 		text-transform: uppercase;
 		text-decoration: none;

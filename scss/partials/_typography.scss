@@ -9,7 +9,7 @@ select,
 textarea {
 	color: $color__text;
 	font-family: $font__body;
-	font-size: em( 14 );
+	@include font-size( 14 );
 	line-height: $line-height;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -19,20 +19,20 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	color: white;
-	font-size: em( 28 );
+	@include font-size( 28 );
 	font-weight: $bold;
 
 }
 
 h2 {
 	color: $color__text--highlight;
-	font-size: em( 24 );
+	@include font-size( 24 );
 	font-weight: bold;
 }
 
 h3, .widget-title {
 	color: $color__text--tertiary;
-	font-size: em( 18 );
+	@include font-size( 18 );
 	font-weight: $normal;
 
 	a, a:visited, a:hover {
@@ -42,7 +42,7 @@ h3, .widget-title {
 }
 
 h4 {
-	font-size: em( 14 );
+	@include font-size( 14 );
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -69,8 +69,7 @@ address {
 pre {
 	background: $color__pre-background;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
+	@include font-size( 15 );
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
