@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div class="page-header" style="background-color: <?php echo mfcs_header_color(); ?>;">
+	<div class="page-header" style="background-color: <?php echo mfcs_background_color(); ?>;">
 		<?php if ( has_post_thumbnail() && ! ( function_exists( 'jetpack_is_mobile' ) && jetpack_is_mobile() ) ) : ?>
 			<div class="featured-image container">
 				<?php the_post_thumbnail(); ?>
@@ -24,7 +24,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<header class="entry-header">
+		<header class="entry-header" style="background-color: <?php echo mfcs_header_color(); ?>;">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header><!-- .entry-header -->
 

@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div class="page-header" style="background-color: <?php echo mfcs_header_color(); ?>;">
+	<div class="page-header" style="background-color: <?php echo mfcs_background_color(); ?>;">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="featured-image container">
 				<?php the_post_thumbnail(); ?>
