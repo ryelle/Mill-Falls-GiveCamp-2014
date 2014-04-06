@@ -31,6 +31,7 @@ h2 {
 }
 
 h3, .widget-title {
+	margin: $spacing/1.25 0 $spacing/3;
 	color: $color__text--tertiary;
 	@include font-size( 18 );
 	font-weight: $normal;

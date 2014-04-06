@@ -275,6 +275,7 @@ h2 {
 }
 
 h3, .widget-title {
+  margin: 32px 0 13.33333px;
   color: #7fa352;
   font-size: 18px;
   font-size: 1.125rem;
