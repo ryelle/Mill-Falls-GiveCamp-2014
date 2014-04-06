@@ -1035,6 +1035,16 @@ a:active {
   text-indent: -9999em;
 }
 
+a.donate-button {
+  display: block;
+  background: url("images/donate-small.png") no-repeat center;
+  background-size: 270px 52px;
+  width: 270px;
+  height: 52px;
+  position: relative;
+  text-indent: -9999em;
+}
+
 /*--------------------------------------------------------------
 11.0 - Infinite scroll
 --------------------------------------------------------------*/
