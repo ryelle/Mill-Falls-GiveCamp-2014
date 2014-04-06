@@ -22,3 +22,34 @@
 	padding: 0;
 }
 
+
+.widget_mfcs_2014_submenus {
+	margin-bottom: 4em;
+}
+
+.widget_mfcs_2014_submenus ul {
+	width: 100%;
+}
+
+.widget_mfcs_2014_submenus ul li {
+	a {
+		display: block;
+		padding: 15px 0 15px 20px;
+		color: #5e7e37;
+		text-decoration: none;
+	
+		&.current-page {
+			background-color: #857891;
+			color: white;
+			
+			&:hover {
+				background-color: #857891;
+			}
+		}
+		
+		&:hover {
+			background-color: #98b871;
+			color: white;
+		}
+	}
+}
