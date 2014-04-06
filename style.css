@@ -1024,7 +1024,7 @@ a:active {
   top: -40px;
   padding: 10px 26.66667px 20px;
   line-height: 1;
-  background-color: #869e69;
+  background-color: rgba(132, 158, 105, 0.9);
   text-align: center;
 }
 .entry-header .entry-title {
