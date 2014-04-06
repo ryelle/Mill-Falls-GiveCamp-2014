@@ -25,11 +25,12 @@ $color__border: #ebede8;
 $color__pre-background: #eee;
 $color__mark-background: #fff9c0;
 
-$color__hr: #ccc;
+$color__hr: #ded6cd;
 
 $color__screen-reader-text-background: #f1f1f1;
 $color__screen-reader-text-text: #21759b;
 
-$color__input-text: #666;
-$color__input-text--focus: #111;
-$color__input-border: #ccc;
+$color__input-text: darken(#ded6cd, 15%);
+$color__input-text--focus: #7fa352;
+$color__input-background: #fbf9f6;
+$color__input-border: #ded6cd;
