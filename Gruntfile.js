@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                     // DEFAULT: browsers: ['> 1%', 'last 2 versions', 'ff 17', 'opera 12.1']
                     browsers: ['> 1%', 'last 2 versions', 'ff 17', 'opera 12.1', 'ie 8', 'ie 9']
                 },
-                src: 'css/style.css'
+                src: 'style.css'
             },
         },
         watch: {
