@@ -33,6 +33,9 @@ function mfcs_2014_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	// Add Editor Styles
+	add_editor_style();
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
@@ -138,7 +141,7 @@ function mfcs_2014_fonts_url() {
 	$fonts_url = '';
 
 	$font_families = array(
-		'Open+Sans:400italic,400',
+		'Open+Sans:400italic,400,700italic,700',
 		'Montserrat:400,700'
 	);
 
