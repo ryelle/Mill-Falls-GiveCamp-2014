@@ -592,6 +592,49 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+?.? - Header
+--------------------------------------------------------------*/
+body {
+  border-top: 5px solid #1c3d74;
+}
+
+#masthead {
+  position: relative;
+  margin-bottom: 20px;
+}
+#masthead:before, #masthead:after {
+  content: "";
+  display: table;
+}
+#masthead:after {
+  clear: both;
+}
+
+.site-title a {
+  display: block;
+  float: left;
+  width: 150px;
+  height: 130px;
+  background: url("images/logo-large.png") no-repeat center;
+  background-size: 150px 130px;
+  position: relative;
+  text-indent: -9999em;
+}
+
+#header-navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#site-navigation {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+?.? - Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 5.0 - Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -614,18 +657,40 @@ a:active {
 /*--------------------------------------------------------------
 5.2 - Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
+#header-navigation {
+  margin: 20px 0 0;
 }
-.main-navigation ul {
+#header-navigation ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-.main-navigation ul ul {
+#header-navigation li {
+  float: left;
+  margin-right: 40px;
+}
+#header-navigation a {
+  font-weight: bold;
+  color: #7fa352;
+  text-decoration: none;
+  line-height: 26px;
+}
+#header-navigation a:hover, #header-navigation a:active, #header-navigation a:focus {
+  text-decoration: underline;
+}
+
+#site-navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+#site-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+#site-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
   float: left;
@@ -634,21 +699,21 @@ a:active {
   top: 1.5em;
   z-index: 99999;
 }
-.main-navigation ul ul ul {
+#site-navigation ul ul ul {
   left: 100%;
   top: 0;
 }
-.main-navigation ul ul a {
+#site-navigation ul ul a {
   width: 200px;
 }
-.main-navigation li {
+#site-navigation li {
   float: left;
   position: relative;
 }
-.main-navigation li:hover > ul {
+#site-navigation li:hover > ul {
   display: block;
 }
-.main-navigation a {
+#site-navigation a {
   display: block;
   text-decoration: none;
 }
@@ -844,6 +909,16 @@ a:active {
 --------------------------------------------------------------*/
 .comment-content a {
   word-wrap: break-word;
+}
+
+.donate-button a {
+  display: block;
+  background: url("images/donate-small.png") no-repeat center;
+  background-size: 135px 26px;
+  width: 135px;
+  height: 26px;
+  position: relative;
+  text-indent: -9999em;
 }
 
 /*--------------------------------------------------------------

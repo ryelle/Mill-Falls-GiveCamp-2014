@@ -1,0 +1,32 @@
+body {
+	border-top: 5px solid #1c3d74;
+}
+
+#masthead {
+	@include clearfix;
+	position: relative;
+	margin-bottom: $spacing/2;
+}
+
+.site-title a {
+	display: block;
+	float: left;
+	width: 150px;
+	height: 130px;
+	background: url('images/logo-large.png') no-repeat center;
+	background-size: 150px 130px;
+
+	position: relative;
+	text-indent: -9999em;
+}
+
+#header-navigation {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+#site-navigation {
+	display:none;
+}

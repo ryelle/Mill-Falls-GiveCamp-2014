@@ -2,11 +2,38 @@
 // Menus
 // ==========================================================================
 
-.main-navigation {
-	clear: both;
+#header-navigation {
+	margin: $spacing/2 0 0;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	li {
+		float: left;
+		margin-right: $spacing;
+	}
+
+	a {
+		font-weight: bold;
+		color: $color__text--tertiary;
+		text-decoration: none;
+		line-height: 26px;
+
+		&:hover, &:active, &:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+#site-navigation {
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
 	display: block;
-	float: left;
-	width: 100%;
 
 	ul {
 		list-style: none;
@@ -37,6 +64,7 @@
 			}
 		}
 	}
+
 	li {
 		float: left;
 		position: relative;
@@ -48,10 +76,12 @@
 			> a {}
 		}
 	}
+
 	a {
 		display: block;
 		text-decoration: none;
 	}
+
 	.current_page_item,
 	.current-menu-item {
 		a {}
