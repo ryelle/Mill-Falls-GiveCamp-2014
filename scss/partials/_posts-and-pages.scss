@@ -2,11 +2,12 @@
 // Posts and pages
 // ==========================================================================
 
-.sticky {
-}
-
 .hentry {
 	margin: 0 0 $spacing;
+
+	:first-child {
+		margin-top: 0;
+	}
 }
 
 .byline,
@@ -30,4 +31,37 @@
 .page-links {
 	clear: both;
 	margin: 0 0 $spacing;
+}
+
+.page-header {
+	min-height: $spacing * 2;
+}
+
+.entry-header {
+	position: relative;
+	top: $spacing * -1;
+	padding: 10px $spacing/1.5 20px;
+	line-height: 1;
+	background-color: $color__background--header;
+	text-align: center;
+
+	.entry-title { margin: 0; }
+
+	.entry-title:before,
+	.entry-title:after {
+		position: relative;
+		content: ' ';
+		display: inline-block;
+		width: 40px;
+		height: 44px;
+		margin: 0 40px -5px 0;
+		background: url('images/left-leaf.png') no-repeat center;
+		background-size: 40px 44px;
+	}
+
+	.entry-title:after {
+		margin: 0 0 -5px 40px;
+		background: url('images/right-leaf.png') no-repeat center;
+		background-size: 40px 44px;
+	}
 }

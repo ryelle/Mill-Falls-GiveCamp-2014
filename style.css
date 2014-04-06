@@ -896,6 +896,9 @@ a:active {
 .hentry {
   margin: 0 0 40px;
 }
+.hentry :first-child {
+  margin-top: 0;
+}
 
 .byline,
 .updated {
@@ -916,6 +919,38 @@ a:active {
 .page-links {
   clear: both;
   margin: 0 0 40px;
+}
+
+.page-header {
+  min-height: 80px;
+}
+
+.entry-header {
+  position: relative;
+  top: -40px;
+  padding: 10px 26.66667px 20px;
+  line-height: 1;
+  background-color: #869e69;
+  text-align: center;
+}
+.entry-header .entry-title {
+  margin: 0;
+}
+.entry-header .entry-title:before,
+.entry-header .entry-title:after {
+  position: relative;
+  content: ' ';
+  display: inline-block;
+  width: 40px;
+  height: 44px;
+  margin: 0 40px -5px 0;
+  background: url("images/left-leaf.png") no-repeat center;
+  background-size: 40px 44px;
+}
+.entry-header .entry-title:after {
+  margin: 0 0 -5px 40px;
+  background: url("images/right-leaf.png") no-repeat center;
+  background-size: 40px 44px;
 }
 
 /*--------------------------------------------------------------
