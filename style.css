@@ -395,6 +395,11 @@ big {
 /*--------------------------------------------------------------
 2.5 - Structure
 --------------------------------------------------------------*/
+.site {
+  border-top: 4px solid #1C3D74;
+  border-bottom: 6px solid #1C3D74;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1000px;
@@ -671,7 +676,7 @@ body {
 }
 
 .site-info {
-  padding: 20px;
+  padding: 20px 0 40px;
   color: #4b4e53;
   font-size: 12px;
   text-align: center;
