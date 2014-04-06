@@ -10,8 +10,10 @@
 		}
 	}
 
+	.site-info,
 	.site-footer .container {
-		padding: 0 1em;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 
 	#footer-navigation {
@@ -34,6 +36,18 @@
 }
 
 @media screen and (max-width: 600px) {
+	#featured {
+		top: 0;
+	}
+
+	.site-title {
+		margin-top: 50px;
+
+		a {
+			float: none;
+			margin: 0 auto;
+		}
+	}
 
 	.entry-header {
 		padding: 15px $spacing/2;

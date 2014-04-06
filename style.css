@@ -662,12 +662,17 @@ body {
 .site-title a {
   display: block;
   float: left;
+  padding: 10px;
   width: 150px;
   height: 130px;
   background: url("images/logo-large.png") no-repeat center;
   background-size: 150px 130px;
   position: relative;
   text-indent: -9999em;
+}
+.site-title a:hover, .site-title a:focus {
+  background-image: url("images/logo-hover.png");
+  background-size: 170px 150px;
 }
 
 #header-navigation {
@@ -839,6 +844,7 @@ a:active {
 
   .tinynav {
     display: block;
+    margin: 0 auto;
   }
 
   #site-navigation {
@@ -1256,8 +1262,10 @@ object {
     border-bottom: none;
   }
 
+  .site-info,
   .site-footer .container {
-    padding: 0 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   #footer-navigation li {
@@ -1276,6 +1284,18 @@ object {
   }
 }
 @media screen and (max-width: 600px) {
+  #featured {
+    top: 0;
+  }
+
+  .site-title {
+    margin-top: 50px;
+  }
+  .site-title a {
+    float: none;
+    margin: 0 auto;
+  }
+
   .entry-header {
     padding: 15px 20px;
   }

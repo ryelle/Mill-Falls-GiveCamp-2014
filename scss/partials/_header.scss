@@ -11,6 +11,7 @@ body {
 .site-title a {
 	display: block;
 	float: left;
+	padding: 10px;
 	width: 150px;
 	height: 130px;
 	background: url('images/logo-large.png') no-repeat center;
@@ -18,6 +19,11 @@ body {
 
 	position: relative;
 	text-indent: -9999em;
+
+	&:hover, &:focus {
+		background-image: url('images/logo-hover.png');
+		background-size: 170px 150px;
+	}
 }
 
 #header-navigation {
