@@ -140,7 +140,6 @@ class MFCS_MenuWidget extends WP_Widget {
 
 		echo $args[ 'before_widget' ];
 
-		printf( '<h3>%s</h3>', $parent->title );
 		echo '<ul>';
 
 		foreach ( $siblings as $menu_item ){
