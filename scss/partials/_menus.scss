@@ -111,21 +111,24 @@
 	}
 }
 
-// Small menu
-.menu-toggle {
-	cursor: pointer;
-	display: none;
-}
+/* styles for desktop */
+.tinynav { display: none }
 
+/* styles for mobile */
 @media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
+	#site-navigation > div > ul { display: none }
+
+	.tinynav {
+		display: block
 	}
 
-	.main-navigation ul {
-		display: none;
+	#site-navigation { clear:both; position: relative; }
+	.menu-main-nav-container {
+		clear: both;
+		padding-top: $spacing/2;
+		width: 100%;
 	}
+
 }
 
 .site-main {

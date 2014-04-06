@@ -45,3 +45,26 @@
 	}
 
 }
+
+@media screen and (max-width: 600px) {
+
+	.hentry {
+		box-sizing: border-box;
+		padding: 0 1em;
+	}
+
+	.content-area {
+		float: none;
+		margin: 0;
+	}
+
+	.site-main {
+		margin: 0;
+	}
+
+	.site-content .widget-area {
+		float: none;
+		width: 100%;
+	}
+
+}

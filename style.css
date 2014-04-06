@@ -433,6 +433,26 @@ big {
   width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .hentry {
+    box-sizing: border-box;
+    padding: 0 1em;
+  }
+
+  .content-area {
+    float: none;
+    margin: 0;
+  }
+
+  .site-main {
+    margin: 0;
+  }
+
+  .site-content .widget-area {
+    float: none;
+    width: 100%;
+  }
+}
 /*--------------------------------------------------------------
 3.0 - Elements
 --------------------------------------------------------------*/
@@ -764,19 +784,30 @@ a:active {
   text-decoration: none;
 }
 
-.menu-toggle {
-  cursor: pointer;
+/* styles for desktop */
+.tinynav {
   display: none;
 }
 
+/* styles for mobile */
 @media screen and (max-width: 600px) {
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
+  #site-navigation > div > ul {
+    display: none;
+  }
+
+  .tinynav {
     display: block;
   }
 
-  .main-navigation ul {
-    display: none;
+  #site-navigation {
+    clear: both;
+    position: relative;
+  }
+
+  .menu-main-nav-container {
+    clear: both;
+    padding-top: 20px;
+    width: 100%;
   }
 }
 .site-main .comment-navigation,
@@ -1171,5 +1202,14 @@ object {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+@media screen and (max-width: 600px) {
+  .entry-header {
+    padding: 15px 20px;
+  }
+  .entry-header .entry-title:before,
+  .entry-header .entry-title:after {
+    display: none;
   }
 }
