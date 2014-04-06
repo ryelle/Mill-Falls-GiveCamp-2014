@@ -427,6 +427,8 @@ th {
 --------------------------------------------------------------*/
 a {
   color: #ff9900;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 a:visited {
@@ -436,7 +438,8 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-  color: #804d00;
+  color: #ff9900;
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------

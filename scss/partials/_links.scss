@@ -4,12 +4,17 @@
 
 a {
 	color: $color__link;
+	font-weight: bold;
+	text-decoration: none;
 }
+
 a:visited {
-	color: $color__link--visited;
+	color: $color__link;
 }
+
 a:hover,
 a:focus,
 a:active {
-	color: $color__link--hover;
+	color: $color__link;
+	text-decoration: underline;
 }
