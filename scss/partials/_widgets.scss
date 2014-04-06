@@ -14,3 +14,11 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+.widget-area ol,
+.widget-area ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
