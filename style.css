@@ -671,12 +671,12 @@ body {
   width: 150px;
   height: 130px;
   background: url("images/logo-large.png") no-repeat center;
-  background-size: 150px 130px;
+  background-size: 170px 150px;
   position: relative;
   text-indent: -9999em;
 }
 .site-title a:hover, .site-title a:focus {
-  background-image: url("images/logo-hover.png");
+  background-image: url("images/logo-grown.png");
   background-size: 170px 150px;
 }
 
