@@ -84,9 +84,11 @@ add_action( 'pre_post_update', 'mfcs_save_page', 5, 2 );
 /**
  * Get the background color
  */
-function mfcs_background_color( $default = '#faf6f2' ) {
+function mfcs_background_color( $id = false, $default = '#faf6f2' ) {
+	if ( false == $id )
+		$id = get_the_ID();
 
-	$color = get_post_meta( get_the_ID(), 'mfcs_header_color', true );
+	$color = get_post_meta( $id, 'mfcs_header_color', true );
 	if ( ! $color ) $color = $default;
 
 	return $color;
@@ -96,9 +98,11 @@ function mfcs_background_color( $default = '#faf6f2' ) {
 /**
  * Get the header color
  */
-function mfcs_header_color( $default = '#849E69' ) {
+function mfcs_header_color( $id = false, $default = '#849E69' ) {
+	if ( false == $id )
+		$id = get_the_ID();
 
-	$color = get_post_meta( get_the_ID(), 'mfcs_text_bg_color', true );
+	$color = get_post_meta( $id, 'mfcs_text_bg_color', true );
 	if ( ! $color ) $color = $default;
 
 	return $color;

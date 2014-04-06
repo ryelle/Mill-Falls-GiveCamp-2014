@@ -5,8 +5,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+	<header class="post-header">
+		<h2 class="post-title"><?php the_title(); ?></h2>
 
 		<div class="entry-meta">
 			<?php mfcs_2014_posted_on(); ?>

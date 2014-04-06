@@ -1053,6 +1053,15 @@ a:active {
 .page-header {
   min-height: 80px;
 }
+.archive .page-header {
+  min-height: 0;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #849E69;
+}
+.archive .page-header .page-title {
+  margin: 0;
+}
 
 .entry-header {
   position: relative;
