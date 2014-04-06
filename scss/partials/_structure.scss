@@ -51,12 +51,14 @@
 
 }
 
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 1000px) {
 	.hentry {
 		box-sizing: border-box;
 		padding: 0 1em;
 	}
+}
+
+@media screen and (max-width: 600px) {
 
 	.content-area {
 		float: none;

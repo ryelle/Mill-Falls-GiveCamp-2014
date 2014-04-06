@@ -3,6 +3,14 @@
 // ==========================================================================
 
 #header-navigation,
+#site-navigation,
+#footer-navigation {
+	a {
+		font-family: $font__header;
+	}
+}
+
+#header-navigation,
 #footer-navigation {
 	margin: $spacing/2 0 0;
 
@@ -115,6 +123,12 @@
 .tinynav { display: none }
 
 /* styles for mobile */
+@media screen and (max-width: 800px) {
+	#site-navigation {
+		margin-left: 150px;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	#site-navigation > div > ul { display: none }
 
@@ -122,7 +136,12 @@
 		display: block
 	}
 
-	#site-navigation { clear:both; position: relative; }
+	#site-navigation {
+		clear:both;
+		position: relative;
+		margin-left: 0px;
+	}
+
 	.menu-main-nav-container {
 		clear: both;
 		padding-top: $spacing/2;

@@ -438,12 +438,13 @@ big {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .hentry {
     box-sizing: border-box;
     padding: 0 1em;
   }
-
+}
+@media screen and (max-width: 600px) {
   .content-area {
     float: none;
     margin: 0;
@@ -725,6 +726,12 @@ a:active {
 /*--------------------------------------------------------------
 5.2 - Menus
 --------------------------------------------------------------*/
+#header-navigation a,
+#site-navigation a,
+#footer-navigation a {
+  font-family: Montserrat, Trebuchet, sans-serif;
+}
+
 #header-navigation,
 #footer-navigation {
   margin: 20px 0 0;
@@ -820,6 +827,11 @@ a:active {
 }
 
 /* styles for mobile */
+@media screen and (max-width: 800px) {
+  #site-navigation {
+    margin-left: 150px;
+  }
+}
 @media screen and (max-width: 600px) {
   #site-navigation > div > ul {
     display: none;
@@ -832,6 +844,7 @@ a:active {
   #site-navigation {
     clear: both;
     position: relative;
+    margin-left: 0px;
   }
 
   .menu-main-nav-container {
@@ -1232,6 +1245,34 @@ object {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+@media screen and (max-width: 700px) {
+  #featured .widget {
+    width: 100%;
+    border-bottom: 1px solid #ebede8;
+  }
+  #featured .widget:last-of-type {
+    border-bottom: none;
+  }
+
+  .site-footer .container {
+    padding: 0 1em;
+  }
+
+  #footer-navigation li {
+    float: none;
+    display: block;
+    margin-right: 0;
+    padding: 5px 0;
+    text-align: center;
+  }
+
+  .site-footer .fb-like {
+    float: none;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {

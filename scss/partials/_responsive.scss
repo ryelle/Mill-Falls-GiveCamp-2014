@@ -1,4 +1,38 @@
 
+@media screen and (max-width: 700px) {
+
+	#featured .widget {
+		width: 100%;
+		border-bottom: 1px solid $color__border;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+
+	.site-footer .container {
+		padding: 0 1em;
+	}
+
+	#footer-navigation {
+		li {
+			float: none;
+			display: block;
+			margin-right: 0;
+			padding: 5px 0;
+			text-align: center;
+		}
+	}
+
+	.site-footer .fb-like {
+		float: none;
+		margin: 10px auto;
+		text-align: center;
+		width: 100%;
+	}
+
+}
+
 @media screen and (max-width: 600px) {
 
 	.entry-header {
